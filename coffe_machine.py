@@ -97,17 +97,20 @@ def coffee_machine():
         case = what_to_drink()
         if case == "espresso":
             check_resources_for_espresso(case)
+            print("The cost is: ",MENU["espresso"]["cost"])
             print("Insert coins")
             quantity = check_coins()
             is_possible_to_serve(case, quantity)
         elif case == "latte":
             check_resources(case)
+            print("The cost is: ",MENU["latte"]["cost"])
             print("Insert coins")
             quantity = check_coins()
             is_possible_to_serve(case, quantity)
             resources["milk"] = resources["milk"] - MENU[case]["ingredients"]["milk"]
         elif case == "cappuccino":
             check_resources(case)
+            print("The cost is: ",MENU["cappuccino"]["cost"])
             print("Insert coins")
             quantity = check_coins()
             is_possible_to_serve(case, quantity)

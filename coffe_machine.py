@@ -118,6 +118,14 @@ def coffee_machine():
         elif case == "report":
             for key in resources:
                 print(key + ":", resources[key])
+        elif case == "ingredients":
+            type = input("Which ingredient do you want to add? (water, milk, coffee)").lower()
+            if type == "water":
+                resources["water"] = resources["water"] + int(input("How much do you want to add? "))
+            elif type == "milk":
+                resources["milk"] = resources["milk"] + int(input("How much do you want to add? "))
+            elif type == "coffee":
+                resources["coffee"] = resources["coffee"] + int(input("How much do you want to add? "))                
         elif case == "off":
             print("Turning off...")
             exit()
